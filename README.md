@@ -90,7 +90,7 @@ BPIC17-Analyzer/
 │   └── worker.py            # background thread (GUI tidak membeku)
 ├── tests/
 │   ├── synthetic_log.py     # generator log sintetis edge case
-│   └── test_exercises.py    # 18 unit test (pytest)
+│   └── test_exercises.py    # 19 unit test (pytest)
 └── data/
     └── synthetic_edge_cases.xes
 ```
