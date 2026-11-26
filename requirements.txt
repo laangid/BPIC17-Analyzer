@@ -1,0 +1,4 @@
+pm4py>=2.7.11
+pandas>=2.0
+PySide6>=6.6
+pytest>=7.0

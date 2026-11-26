@@ -1,0 +1,10 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# dataset besar tidak di-commit
+data/*.xes
+data/*.xes.gz
+!data/synthetic_edge_cases.xes
+hasil/

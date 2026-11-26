@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<log xes.version="1849-2016" xes.features="nested-attributes" xmlns="http://www.xes-standard.org/">
+	<extension name="Organizational" prefix="org" uri="http://www.xes-standard.org/org.xesext" />
+	<extension name="Concept" prefix="concept" uri="http://www.xes-standard.org/concept.xesext" />
+	<extension name="Time" prefix="time" uri="http://www.xes-standard.org/time.xesext" />
+	<extension name="Lifecycle" prefix="lifecycle" uri="http://www.xes-standard.org/lifecycle.xesext" />
+	<string key="origin" value="csv" />
+	<trace>
+		<string key="concept:name" value="S01_accepted_twice" />
+		<event>
+			<string key="concept:name" value="A_Create Application" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-01T08:00:00+00:00" />
+			<string key="org:resource" value="User_1" />
+		</event>
+		<event>
+			<string key="concept:name" value="O_Accepted" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-03T08:00:00+00:00" />
+			<string key="org:resource" value="User_1" />
+		</event>
+		<event>
+			<string key="concept:name" value="O_Accepted" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-05T08:00:00+00:00" />
+			<string key="org:resource" value="User_2" />
+		</event>
+		<event>
+			<string key="concept:name" value="A_Pending" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-11T08:00:00+00:00" />
+			<string key="org:resource" value="User_2" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="S02_cancel_middle" />
+		<event>
+			<string key="concept:name" value="A_Create Application" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-01T08:00:00+00:00" />
+			<string key="org:resource" value="User_1" />
+		</event>
+		<event>
+			<string key="concept:name" value="O_Cancelled" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-04T08:00:00+00:00" />
+			<string key="org:resource" value="User_1" />
+		</event>
+		<event>
+			<string key="concept:name" value="O_Created" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-05T08:00:00+00:00" />
+			<string key="org:resource" value="User_1" />
+		</event>
+		<event>
+			<string key="concept:name" value="A_Pending" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-07T08:00:00+00:00" />
+			<string key="org:resource" value="User_3" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="S03_refused_and_accepted" />
+		<event>
+			<string key="concept:name" value="A_Create Application" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-01T08:00:00+00:00" />
+			<string key="org:resource" value="User_1" />
+		</event>
+		<event>
+			<string key="concept:name" value="O_Refused" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-06T08:00:00+00:00" />
+			<string key="org:resource" value="User_2" />
+		</event>
+		<event>
+			<string key="concept:name" value="O_Accepted" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-09T08:00:00+00:00" />
+			<string key="org:resource" value="User_2" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="S04_fraud_scheduled_twice_complete_once" />
+		<event>
+			<string key="concept:name" value="A_Create Application" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-01T08:00:00+00:00" />
+			<string key="org:resource" value="User_1" />
+		</event>
+		<event>
+			<string key="concept:name" value="W_Assess potential fraud" />
+			<string key="lifecycle:transition" value="schedule" />
+			<date key="time:timestamp" value="2016-01-02T08:00:00+00:00" />
+			<string key="org:resource" value="User_5" />
+		</event>
+		<event>
+			<string key="concept:name" value="W_Assess potential fraud" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2016-01-02T20:00:00+00:00" />
+			<string key="org:resource" value="User_5" />
+		</event>
+		<event>
+			<string key="concept:name" value="W_Assess potential fraud" />
+			<string key="lifecycle:transition" value="ate_abort" />
+			<date key="time:timestamp" value="2016-01-03T08:00:00+00:00" />
+			<string key="org:resource" value="User_5" />
+		</event>
+		<event>
+			<string key="concept:name" value="W_Assess potential fraud" />
+			<string key="lifecycle:transition" value="schedule" />
+			<date key="time:timestamp" value="2016-01-04T08:00:00+00:00" />
+			<string key="org:resource" value="User_5" />
+		</event>
+		<event>
+			<string key="concept:name" value="W_Assess potential fraud" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2016-01-04T20:00:00+00:00" />
+			<string key="org:resource" value="User_5" />
+		</event>
+		<event>
+			<string key="concept:name" value="W_Assess potential fraud" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-05T08:00:00+00:00" />
+			<string key="org:resource" value="User_5" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="S05_fraud_two_complete_diff_resource" />
+		<event>
+			<string key="concept:name" value="A_Create Application" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-01T08:00:00+00:00" />
+			<string key="org:resource" value="User_1" />
+		</event>
+		<event>
+			<string key="concept:name" value="W_Assess potential fraud" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2016-01-02T08:00:00+00:00" />
+			<string key="org:resource" value="User_5" />
+		</event>
+		<event>
+			<string key="concept:name" value="W_Assess potential fraud" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-03T08:00:00+00:00" />
+			<string key="org:resource" value="User_5" />
+		</event>
+		<event>
+			<string key="concept:name" value="W_Assess potential fraud" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2016-01-04T08:00:00+00:00" />
+			<string key="org:resource" value="User_6" />
+		</event>
+		<event>
+			<string key="concept:name" value="W_Assess potential fraud" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-05T08:00:00+00:00" />
+			<string key="org:resource" value="User_6" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="S06_fraud_two_complete_same_resource" />
+		<event>
+			<string key="concept:name" value="A_Create Application" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-01T08:00:00+00:00" />
+			<string key="org:resource" value="User_1" />
+		</event>
+		<event>
+			<string key="concept:name" value="W_Assess potential fraud" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2016-01-02T08:00:00+00:00" />
+			<string key="org:resource" value="User_7" />
+		</event>
+		<event>
+			<string key="concept:name" value="W_Assess potential fraud" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-03T08:00:00+00:00" />
+			<string key="org:resource" value="User_7" />
+		</event>
+		<event>
+			<string key="concept:name" value="W_Assess potential fraud" />
+			<string key="lifecycle:transition" value="start" />
+			<date key="time:timestamp" value="2016-01-04T08:00:00+00:00" />
+			<string key="org:resource" value="User_7" />
+		</event>
+		<event>
+			<string key="concept:name" value="W_Assess potential fraud" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-06T08:00:00+00:00" />
+			<string key="org:resource" value="User_7" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="S07_cancel_then_accept" />
+		<event>
+			<string key="concept:name" value="A_Create Application" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-01T08:00:00+00:00" />
+			<string key="org:resource" value="User_1" />
+		</event>
+		<event>
+			<string key="concept:name" value="O_Cancelled" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-03T08:00:00+00:00" />
+			<string key="org:resource" value="User_1" />
+		</event>
+		<event>
+			<string key="concept:name" value="O_Created" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-04T08:00:00+00:00" />
+			<string key="org:resource" value="User_2" />
+		</event>
+		<event>
+			<string key="concept:name" value="O_Accepted" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-08T08:00:00+00:00" />
+			<string key="org:resource" value="User_2" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="S08_accept_then_cancel_end" />
+		<event>
+			<string key="concept:name" value="A_Create Application" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-01T08:00:00+00:00" />
+			<string key="org:resource" value="User_1" />
+		</event>
+		<event>
+			<string key="concept:name" value="O_Accepted" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-03T08:00:00+00:00" />
+			<string key="org:resource" value="User_1" />
+		</event>
+		<event>
+			<string key="concept:name" value="O_Cancelled" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-13T08:00:00+00:00" />
+			<string key="org:resource" value="User_1" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="S09_fraud_two_complete_empty_resource" />
+		<event>
+			<string key="concept:name" value="A_Create Application" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-01T08:00:00+00:00" />
+			<string key="org:resource" value="User_1" />
+		</event>
+		<event>
+			<string key="concept:name" value="W_Assess potential fraud" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-02T08:00:00+00:00" />
+			<float key="org:resource" value="nan" />
+		</event>
+		<event>
+			<string key="concept:name" value="W_Assess potential fraud" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-03T08:00:00+00:00" />
+			<string key="org:resource" value="" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="S10_refused_then_cancel_end" />
+		<event>
+			<string key="concept:name" value="A_Create Application" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-01T08:00:00+00:00" />
+			<string key="org:resource" value="User_1" />
+		</event>
+		<event>
+			<string key="concept:name" value="O_Refused" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-02T08:00:00+00:00" />
+			<string key="org:resource" value="User_4" />
+		</event>
+		<event>
+			<string key="concept:name" value="O_Cancelled" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-04T08:00:00+00:00" />
+			<string key="org:resource" value="User_4" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="S11_same_timestamp_tie" />
+		<event>
+			<string key="concept:name" value="A_Create Application" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-01T08:00:00+00:00" />
+			<string key="org:resource" value="User_1" />
+		</event>
+		<event>
+			<string key="concept:name" value="O_Accepted" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-02T08:00:00+00:00" />
+			<string key="org:resource" value="User_1" />
+		</event>
+		<event>
+			<string key="concept:name" value="O_Cancelled" />
+			<string key="lifecycle:transition" value="complete" />
+			<date key="time:timestamp" value="2016-01-02T08:00:00+00:00" />
+			<string key="org:resource" value="User_1" />
+		</event>
+	</trace>
+</log>
