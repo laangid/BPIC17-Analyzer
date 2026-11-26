@@ -11,24 +11,30 @@ manual di kode. Setiap jawaban disertai aturan filter, denominator, daftar case 
 
 ## 1. Instalasi (Windows + VS Code)
 
-Prasyarat: **Python 3.10 atau lebih baru** (dikembangkan dan diuji dengan Python 3.13; Python 3.12 didukung oleh semua library yang dipakai).
+Prasyarat: **Python 3.10 atau lebih baru** dan **Git** (opsional).
 
-1. Extract folder proyek, lalu buka di VS Code (**File → Open Folder**).
-2. Buka terminal (**Terminal → New Terminal**) dan jalankan:
+1. Ambil proyek dari GitHub, pilih salah satu:
+   - `git clone https://github.com/laangid/BPIC17-Analyzer.git`, atau
+   - di halaman repo klik **Code → Download ZIP**, lalu extract.
+2. Buka folder `BPIC17-Analyzer` di VS Code (**File → Open Folder**).
+3. Buka terminal (**Terminal → New Terminal**). Klik panah **˅** di sebelah tombol **+** pada panel terminal,
+   lalu pilih **Command Prompt**. Jangan pakai PowerShell, karena perintah `activate` sering diblokir di sana.
+4. Jalankan:
 
-```bash
-python -m venv venv
-venv\Scripts\activate          # Windows (macOS/Linux: source venv/bin/activate)
-pip install -r requirements.txt
-```
+   ```bash
+   python -m venv venv
+   venv\Scripts\activate
+   pip install -r requirements.txt
+   ```
 
-3. Jalankan aplikasi:
+   Pastikan `(venv)` muncul di awal baris terminal. Proses `pip install` butuh beberapa menit.
+   Jika `python` tidak dikenali, ganti dengan `py`.
+5. (Opsional) Cek instalasi: `python -m pytest -v` → harus **19 passed**.
+6. Jalankan aplikasi: `python main.py`
 
-```bash
-python main.py
-```
-
-> Jika VS Code menanyakan interpreter, pilih yang ada di folder `venv`.
+> Setiap membuka terminal baru, aktifkan lagi venv dengan `venv\Scripts\activate`.
+> **Dataset BPIC17 tidak disertakan di repo** karena ukurannya besar. Unduh sesuai bagian 2,
+> lalu taruh di folder `data/`.
 
 ## 2. Dataset
 
