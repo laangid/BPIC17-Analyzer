@@ -8,3 +8,4 @@ data/*.xes
 data/*.xes.gz
 !data/synthetic_edge_cases.xes
 hasil/
+data/DATA.xml
